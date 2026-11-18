@@ -214,8 +214,9 @@ html[lang="en"] .sidebar h1 { font-family: var(--mono); font-size: clamp(28px, 3
 .citation-total strong { margin-inline-start: 2px; color: var(--ink); font: 700 17px/1 var(--mono); }
 .citation-chart {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 6px;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 3px;
   margin: 6px 0 0;
   padding: 0;
   list-style: none;
@@ -234,6 +235,7 @@ html[lang="en"] .sidebar h1 { font-family: var(--mono); font-size: clamp(28px, 3
   width: 68%;
   max-width: 36px;
   height: var(--bar-height);
+  min-height: 1px;
   border-radius: 3px 3px 0 0;
   background: var(--accent);
 }
@@ -244,6 +246,7 @@ html[lang="en"] .sidebar h1 { font-family: var(--mono); font-size: clamp(28px, 3
 }
 .citation-year-label { display: block; margin-top: 4px; color: var(--muted); }
 .metric-source { margin: 7px 0 0; color: var(--muted); font-size: 11px; }
+.citation-note { margin-top: 1px; }
 .metric-source a, .visit-stat-link { color: var(--accent); }
 .metric-source a:hover, .visit-stat-link:hover { text-decoration: underline; text-underline-offset: 2px; }
 .visit-stat { min-height: 29px; margin-top: 10px; padding-top: 7px; border-top: 1px solid var(--line); }
