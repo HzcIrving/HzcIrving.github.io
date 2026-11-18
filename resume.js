@@ -116,6 +116,16 @@ themeSwitcher.hidden = false;
 setTheme(root.dataset.theme === "dark" ? "dark" : "light");
 themeButtons.forEach(button => button.addEventListener("click", () => setTheme(button.dataset.theme, true)));
 
+if (location.hostname === "hzcirving.github.io") {
+  const visitBadge = document.querySelector(".visit-stat-badge");
+  const visitStatus = document.querySelector(".visit-stat-status");
+  visitBadge.addEventListener("load", () => {
+    visitStatus.hidden = true;
+    visitBadge.hidden = false;
+  }, { once: true });
+  visitBadge.src = "https://hits.sh/hzcirving.github.io.svg?style=flat&label=PV&color=005bbb&labelColor=545763";
+}
+
 for (const gallery of galleries) {
   const track = gallery.querySelector(".paper-gallery-track");
   const slides = [...track.querySelectorAll(".paper-slide")];
