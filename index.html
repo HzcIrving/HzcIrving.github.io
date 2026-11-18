@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="何子辰（Irving He）的个人简历，涵盖自动驾驶基础模型研发和移动机器人研究。">
-  <meta name="theme-color" content="#f7f8fa">
+  <meta name="theme-color" content="#13291f">
   <title>Irving He · 个人简历</title>
   <link rel="icon" href="assets/scholar-avatar.jpg" type="image/jpeg">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=retro-1">
   <script>
     try {
       if (localStorage.getItem("resume-theme") === "dark") document.documentElement.dataset.theme = "dark";
     } catch {}
   </script>
-  <script src="resume.js" defer></script>
+  <script src="resume.js?v=retro-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#work">
@@ -26,11 +26,11 @@
         <span>Irving He</span>
       </a>
       <nav class="navigation" aria-label="简历导航">
-        <a href="#about" aria-current="location"><span lang="zh-CN">关于我</span><span lang="en">About</span></a>
-        <a href="#work"><span lang="zh-CN">工作与项目</span><span lang="en">Work</span></a>
-        <a href="#research"><span lang="zh-CN">教育经历</span><span lang="en">Education</span></a>
-        <a href="#publications"><span lang="zh-CN">论文</span><span lang="en">Papers</span></a>
-        <a href="#honors"><span lang="zh-CN">荣誉</span><span lang="en">Honors</span></a>
+        <a href="#about" aria-current="location"><span class="nav-slash" aria-hidden="true">/</span><span lang="zh-CN">关于我</span><span lang="en">About</span></a>
+        <a href="#work"><span class="nav-slash" aria-hidden="true">/</span><span lang="zh-CN">工作与项目</span><span lang="en">Work</span></a>
+        <a href="#research"><span class="nav-slash" aria-hidden="true">/</span><span lang="zh-CN">教育经历</span><span lang="en">Education</span></a>
+        <a href="#publications"><span class="nav-slash" aria-hidden="true">/</span><span lang="zh-CN">论文</span><span lang="en">Papers</span></a>
+        <a href="#honors"><span class="nav-slash" aria-hidden="true">/</span><span lang="zh-CN">荣誉</span><span lang="en">Honors</span></a>
       </nav>
       <div class="header-controls">
         <div class="theme-switch" role="group" aria-label="网站主题" hidden>
@@ -48,10 +48,15 @@
   <div class="wrap resume-layout" id="about">
 
     <aside class="sidebar" aria-labelledby="name">
+      <div class="window-bar" aria-hidden="true">
+        <span class="window-lights"></span>
+        <span>~/about</span>
+      </div>
       <figure class="personal-photo">
-        <div class="photo-placeholder"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#camera"></use></svg><p><span lang="zh-CN">生活照待添加</span><span lang="en">Personal photo to come</span></p></div>
+        <img src="road-console.png" alt="" width="128" height="62">
+        <figcaption><span lang="zh-CN">生活照待添加</span><span lang="en">Personal photo to come</span></figcaption>
       </figure>
-      <p class="section-title" id="profile-title"><span class="heading-icon"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#profile"></use></svg></span><span lang="zh-CN">个人简历</span><span lang="en">Curriculum Vitae</span></p>
+      <p class="profile-prompt"><span aria-hidden="true">$</span> <span lang="zh-CN">个人简历</span><span lang="en">Curriculum Vitae</span></p>
       <h1 id="name"><span lang="zh-CN">何子辰</span><span lang="en">Irving He</span></h1>
       <p class="alternate-name"><span lang="zh-CN">Irving He</span><span lang="en">Zichen He</span></p>
       <p class="specialty"><span lang="zh-CN">自动驾驶基础模型 · 机器人运动规划</span><span lang="en">Autonomous driving foundation models · Robotic motion planning</span></p>

@@ -95,7 +95,7 @@ const themeColor = document.querySelector('meta[name="theme-color"]');
 
 function setTheme(theme, persist = false) {
   root.dataset.theme = theme;
-  themeColor.content = theme === "dark" ? "#101416" : "#f7f8fa";
+  themeColor.content = theme === "dark" ? "#101e16" : "#13291f";
   themeButtons.forEach(button => {
     button.setAttribute("aria-pressed", String(button.dataset.theme === theme));
   });
@@ -142,9 +142,8 @@ function drawParticles(now) {
     const y = spark.y + spark.vy * elapsed + 0.00013 * elapsed ** 2;
     context.fillStyle = spark.color;
     context.globalAlpha = remaining * spark.opacity;
-    context.beginPath();
-    context.arc(x, y, spark.radius * (0.55 + 0.45 * remaining), 0, Math.PI * 2);
-    context.fill();
+    const size = Math.max(1, Math.round(spark.size * remaining));
+    context.fillRect(Math.round(x), Math.round(y), size, size);
   }
   context.globalAlpha = 1;
   particleFrame = particles.length ? requestAnimationFrame(drawParticles) : 0;
@@ -153,23 +152,23 @@ function drawParticles(now) {
 function spawnParticles(event, burst) {
   if (canvas.hidden || event.pointerType !== "mouse") return;
   const now = performance.now();
-  if (!burst && now - lastTrailTime < 34) return;
+  if (!burst && now - lastTrailTime < 64) return;
   lastTrailTime = now;
 
-  const palette = root.dataset.theme === "dark" ? ["#f3a984", "#9abed0"] : ["#a95031", "#58849b"];
-  const count = burst ? 13 : 2;
+  const palette = root.dataset.theme === "dark" ? ["#eabb70", "#b8e1a7"] : ["#966727", "#4c7b51"];
+  const count = burst ? 7 : 1;
   for (let i = 0; i < count; i++) {
     const angle = Math.random() * Math.PI * 2;
-    const speed = (burst ? 0.11 : 0.035) * (0.4 + Math.random() * 0.6);
+    const speed = (burst ? 0.072 : 0.021) * (0.4 + Math.random() * 0.6);
     particles.push({
       x: event.clientX,
       y: event.clientY,
       vx: Math.cos(angle) * speed,
       vy: Math.sin(angle) * speed,
       start: now,
-      life: burst ? 420 + Math.random() * 190 : 240 + Math.random() * 120,
-      radius: (burst ? 2.5 : 1.7) + Math.random(),
-      opacity: burst ? 0.9 : 0.55,
+      life: burst ? 280 + Math.random() * 100 : 150 + Math.random() * 70,
+      size: burst ? 4 : 3,
+      opacity: burst ? 0.75 : 0.35,
       color: palette[i % palette.length],
     });
   }
