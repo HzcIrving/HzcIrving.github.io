@@ -4,6 +4,7 @@ const languageButtons = [...switcher.querySelectorAll("button")];
 const navigation = document.querySelector(".navigation");
 const navigationLinks = [...navigation.querySelectorAll("a")];
 const navigationTargets = navigationLinks.map(link => document.querySelector(link.hash));
+const galleries = [...document.querySelectorAll(".paper-figure")];
 
 function updateCurrentSection() {
   const headerBottom = document.querySelector(".topbar").getBoundingClientRect().bottom;
@@ -44,6 +45,9 @@ function setLanguage(language) {
     : "何子辰（Irving He）的个人简历，涵盖自动驾驶基础模型研发和移动机器人研究。";
   navigation.setAttribute("aria-label", english ? "Résumé navigation" : "简历导航");
   switcher.setAttribute("aria-label", english ? "Choose language" : "选择语言");
+  galleries.forEach(gallery => {
+    gallery.querySelector(".paper-gallery-track").setAttribute("aria-label", english ? "Paper figures" : "论文配图");
+  });
   const themes = document.querySelector(".theme-switch");
   themes.setAttribute("aria-label", english ? "Website theme" : "网站主题");
   const lightLabel = english ? "Light theme" : "白色主题";
@@ -111,6 +115,77 @@ function setTheme(theme, persist = false) {
 themeSwitcher.hidden = false;
 setTheme(root.dataset.theme === "dark" ? "dark" : "light");
 themeButtons.forEach(button => button.addEventListener("click", () => setTheme(button.dataset.theme, true)));
+
+for (const gallery of galleries) {
+  const track = gallery.querySelector(".paper-gallery-track");
+  const slides = [...track.querySelectorAll(".paper-slide")];
+  const controls = gallery.querySelector(".paper-gallery-controls");
+  const counter = controls.querySelector(".paper-count");
+  const hoverDevice = matchMedia("(any-hover: hover)");
+  let selected = 0;
+  let previewing = false;
+
+  function visibleSlide() {
+    return Math.round(track.scrollLeft / track.clientWidth) || 0;
+  }
+
+  function updateCounter(index) {
+    counter.textContent = `${index + 1} / ${slides.length}`;
+    slides.forEach((slide, i) => { slide.inert = i !== index; });
+  }
+
+  function showSlide(index) {
+    track.scrollTo({ left: index * track.clientWidth, behavior: "instant" });
+    updateCounter(index);
+  }
+
+  function moveBy(step) {
+    previewing = false;
+    selected = (visibleSlide() + step + slides.length) % slides.length;
+    showSlide(selected);
+  }
+
+  track.tabIndex = 0;
+  track.setAttribute("role", "group");
+  controls.hidden = false;
+  updateCounter(0);
+  track.addEventListener("scroll", () => {
+    const index = visibleSlide();
+    if (!previewing) selected = index;
+    updateCounter(index);
+  }, { passive: true });
+  track.addEventListener("pointerenter", event => {
+    if (event.pointerType !== "mouse" || !hoverDevice.matches || selected !== 0) return;
+    if (track.contains(document.activeElement) && track !== document.activeElement) return;
+    previewing = true;
+    showSlide(1);
+  });
+  gallery.addEventListener("pointerleave", () => {
+    if (!previewing) return;
+    previewing = false;
+    if (track.contains(document.activeElement) && track !== document.activeElement) {
+      selected = visibleSlide();
+      return;
+    }
+    showSlide(selected);
+  });
+  track.addEventListener("pointerdown", () => {
+    previewing = false;
+    selected = visibleSlide();
+  });
+  track.addEventListener("wheel", event => {
+    if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
+    previewing = false;
+    selected = visibleSlide();
+  }, { passive: true });
+  gallery.addEventListener("keydown", event => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    event.preventDefault();
+    moveBy(event.key === "ArrowLeft" ? -1 : 1);
+  });
+  controls.querySelector(".paper-prev").addEventListener("click", () => moveBy(-1));
+  controls.querySelector(".paper-next").addEventListener("click", () => moveBy(1));
+}
 
 const canvas = document.querySelector(".pointer-effects");
 const context = canvas.getContext("2d");

@@ -7,13 +7,13 @@
   <meta name="theme-color" content="#f5f5f7">
   <title>Irving He · 个人简历</title>
   <link rel="icon" href="assets/scholar-avatar.jpg" type="image/jpeg">
-  <link rel="stylesheet" href="style.css?v=mac-1">
+  <link rel="stylesheet" href="style.css?v=gallery-1">
   <script>
     try {
       if (localStorage.getItem("resume-theme") === "dark") document.documentElement.dataset.theme = "dark";
     } catch {}
   </script>
-  <script src="resume.js?v=mac-1" defer></script>
+  <script src="resume.js?v=gallery-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#work">
@@ -53,8 +53,7 @@
         <span>~/about</span>
       </div>
       <figure class="personal-photo">
-        <img src="road-console.png?v=mac-1" alt="" width="128" height="62">
-        <figcaption><span lang="zh-CN">生活照待添加</span><span lang="en">Personal photo to come</span></figcaption>
+        <img src="assets/irving-zhihu.jpg" alt="何子辰在海边 · Irving He at the beach" width="1440" height="1080" decoding="async">
       </figure>
       <p class="profile-prompt"><span aria-hidden="true">$</span> <span lang="zh-CN">个人简历</span><span lang="en">Curriculum Vitae</span></p>
       <h1 id="name"><span lang="zh-CN">何子辰</span><span lang="en">Irving He</span></h1>
@@ -160,11 +159,34 @@
         <h3 class="publication-group"><span lang="zh-CN">第一、第二作者论文</span><span lang="en">First- and Second-Author Papers</span></h3>
         <article data-author-position="2" class="paper-card with-figure" data-publication-date="2024-06">
           <figure class="paper-figure">
-            <a class="paper-image" href="assets/paper-mlga.png" target="_blank" rel="noopener">
-              <img src="assets/paper-mlga.png" alt="" width="590" height="282" loading="lazy">
-              <span class="sr-only"><span lang="zh-CN">查看架构原图</span><span lang="en">View original architecture figure</span></span>
-            </a>
-            <figcaption><span lang="zh-CN">图 1 · MLGA2C 总体架构</span><span lang="en">Figure 1 · MLGA2C architecture</span><a class="figure-source" href="https://figures.semanticscholar.org/f9c7cad2adb77910273dfa641151671f534ed522/1-Figure1-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a><a class="figure-source" href="assets/paper-mlga-detail.png" target="_blank" rel="noopener"><span lang="zh-CN">图 2 · 注意力模块细节</span><span lang="en">Figure 2 · Attention modules</span> ↗</a></figcaption>
+            <div class="paper-gallery-track">
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-mlga.png" target="_blank" rel="noopener">
+                  <img src="assets/paper-mlga.png" alt="" width="590" height="282" loading="lazy">
+                  <span class="sr-only"><span lang="zh-CN">查看架构原图</span><span lang="en">View original architecture figure</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 1 · MLGA2C 总体架构</span><span lang="en">Figure 1 · MLGA2C architecture</span><a class="figure-source" href="https://figures.semanticscholar.org/f9c7cad2adb77910273dfa641151671f534ed522/1-Figure1-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-mlga-fig4.webp" target="_blank" rel="noopener">
+                  <img src="assets/paper-mlga-fig4.webp" alt="" width="1328" height="776" loading="lazy" decoding="async">
+                  <span class="sr-only"><span lang="zh-CN">查看原图 · 图 4 · 不同规模下的训练奖励</span><span lang="en">View original · Fig. 4 · Training rewards by team size</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 4 · 不同规模下的训练奖励</span><span lang="en">Fig. 4 · Training rewards by team size</span><a class="figure-source" href="https://figures.semanticscholar.org/f9c7cad2adb77910273dfa641151671f534ed522/7-Figure4-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-mlga-detail.png" target="_blank" rel="noopener">
+                  <img src="assets/paper-mlga-detail.png" alt="" width="694" height="592" loading="lazy" decoding="async">
+                  <span class="sr-only"><span lang="zh-CN">查看原图 · 图 2 · 局部与全局注意力</span><span lang="en">View original · Fig. 2 · Local and global attention</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 2 · 局部与全局注意力</span><span lang="en">Fig. 2 · Local and global attention</span><a class="figure-source" href="https://figures.semanticscholar.org/f9c7cad2adb77910273dfa641151671f534ed522/3-Figure2-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+            </div>
+            <figcaption class="paper-gallery-controls" hidden>
+              <button type="button" class="paper-prev"><span aria-hidden="true">‹</span><span class="sr-only"><span lang="zh-CN">上一张图</span><span lang="en">Previous figure</span></span></button>
+              <span class="paper-count" aria-hidden="true">1 / 2</span>
+              <button type="button" class="paper-next"><span aria-hidden="true">›</span><span class="sr-only"><span lang="zh-CN">下一张图</span><span lang="en">Next figure</span></span></button>
+            </figcaption>
           </figure>
           <div class="paper-content">
             <p class="paper-venue"><span class="author-position"><span lang="zh-CN">第二作者</span><span lang="en">Second author</span></span>IEEE Transactions on Neural Networks and Learning Systems · <time datetime="2024-06">2024.06</time></p>
@@ -193,11 +215,27 @@
 
         <article data-author-position="2" class="paper-card with-figure" data-publication-date="2024-04">
           <figure class="paper-figure">
-            <a class="paper-image" href="assets/paper-msa3c.png" target="_blank" rel="noopener">
-              <img src="assets/paper-msa3c.png" alt="" width="1200" height="575" loading="lazy">
-              <span class="sr-only"><span lang="zh-CN">查看原图：图 3 · MSA3C 训练与推理架构</span><span lang="en">View original: Figure 3 · MSA3C training and inference</span></span>
-            </a>
-            <figcaption><span lang="zh-CN">图 3 · MSA3C 训练与推理架构</span><span lang="en">Figure 3 · MSA3C training and inference</span><span class="figure-credit">Dong et al. (2024) · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></figcaption>
+            <div class="paper-gallery-track">
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-msa3c.png" target="_blank" rel="noopener">
+                  <img src="assets/paper-msa3c.png" alt="" width="1200" height="575" loading="lazy">
+                  <span class="sr-only"><span lang="zh-CN">查看原图：图 3 · MSA3C 训练与推理架构</span><span lang="en">View original: Figure 3 · MSA3C training and inference</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 3 · MSA3C 训练与推理架构</span><span lang="en">Figure 3 · MSA3C training and inference</span><span class="figure-credit">Dong et al. (2024) · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></div>
+              </div>
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-social-fig8.webp" target="_blank" rel="noopener">
+                  <img src="assets/paper-social-fig8.webp" alt="" width="1029" height="1092" loading="lazy" decoding="async">
+                  <span class="sr-only"><span lang="zh-CN">查看原图 · 图 8 · 行人环境协同规划对比</span><span lang="en">View original · Fig. 8 · Social co-planning comparison</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 8 · 行人环境协同规划对比</span><span lang="en">Fig. 8 · Social co-planning comparison</span><a class="figure-source" href="https://doi.org/10.1007/s10462-024-10739-w" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+            </div>
+            <figcaption class="paper-gallery-controls" hidden>
+              <button type="button" class="paper-prev"><span aria-hidden="true">‹</span><span class="sr-only"><span lang="zh-CN">上一张图</span><span lang="en">Previous figure</span></span></button>
+              <span class="paper-count" aria-hidden="true">1 / 2</span>
+              <button type="button" class="paper-next"><span aria-hidden="true">›</span><span class="sr-only"><span lang="zh-CN">下一张图</span><span lang="en">Next figure</span></span></button>
+            </figcaption>
           </figure>
           <div class="paper-content">
             <p class="paper-venue"><span class="author-position"><span lang="zh-CN">第二作者</span><span lang="en">Second author</span></span>Artificial Intelligence Review · <time datetime="2024-04">2024.04</time></p>
@@ -226,11 +264,27 @@
 
         <article data-author-position="1" class="paper-card with-figure" data-publication-date="2023-12">
           <figure class="paper-figure">
-            <a class="paper-image" href="assets/paper-masac.png" target="_blank" rel="noopener">
-              <img src="assets/paper-masac.png" alt="" width="1362" height="422" loading="lazy">
-              <span class="sr-only"><span lang="zh-CN">查看原图：图 1 · MASAC 混合规划器架构</span><span lang="en">View original: Figure 1 · MASAC hybrid planner architecture</span></span>
-            </a>
-            <figcaption><span lang="zh-CN">图 1 · MASAC 混合规划器架构</span><span lang="en">Figure 1 · MASAC hybrid planner architecture</span></figcaption>
+            <div class="paper-gallery-track">
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-masac.png" target="_blank" rel="noopener">
+                  <img src="assets/paper-masac.png" alt="" width="1362" height="422" loading="lazy">
+                  <span class="sr-only"><span lang="zh-CN">查看原图：图 1 · MASAC 混合规划器架构</span><span lang="en">View original: Figure 1 · MASAC hybrid planner architecture</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 1 · MASAC 混合规划器架构</span><span lang="en">Figure 1 · MASAC hybrid planner architecture</span></div>
+              </div>
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-masac-fig5.webp" target="_blank" rel="noopener">
+                  <img src="assets/paper-masac-fig5.webp" alt="" width="1302" height="465" loading="lazy" decoding="async">
+                  <span class="sr-only"><span lang="zh-CN">查看原图 · 图 5 · 未见场景的多机器人轨迹对比</span><span lang="en">View original · Fig. 5 · Robot trajectories in an unseen scenario</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 5 · 未见场景的多机器人轨迹对比</span><span lang="en">Fig. 5 · Robot trajectories in an unseen scenario</span><a class="figure-source" href="https://arxiv.org/abs/2112.06594" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+            </div>
+            <figcaption class="paper-gallery-controls" hidden>
+              <button type="button" class="paper-prev"><span aria-hidden="true">‹</span><span class="sr-only"><span lang="zh-CN">上一张图</span><span lang="en">Previous figure</span></span></button>
+              <span class="paper-count" aria-hidden="true">1 / 2</span>
+              <button type="button" class="paper-next"><span aria-hidden="true">›</span><span class="sr-only"><span lang="zh-CN">下一张图</span><span lang="en">Next figure</span></span></button>
+            </figcaption>
           </figure>
           <div class="paper-content">
             <p class="paper-venue"><span class="author-position"><span lang="zh-CN">第一作者</span><span lang="en">First author</span></span>IEEE Transactions on Neural Networks and Learning Systems · <time datetime="2023-12">2023.12</time></p>
@@ -259,11 +313,27 @@
 
         <article data-author-position="2" class="paper-card with-figure" data-publication-date="2023-04">
           <figure class="paper-figure">
-            <a class="paper-image" href="assets/paper-review.png" target="_blank" rel="noopener">
-              <img src="assets/paper-review.png" alt="" width="1332" height="648" loading="lazy">
-              <span class="sr-only"><span lang="zh-CN">查看原图：图 2 · 单机器人强化学习规划方法分类</span><span lang="en">View original: Figure 2 · Taxonomy of RL-based single-robot planners</span></span>
-            </a>
-            <figcaption><span lang="zh-CN">图 2 · 单机器人强化学习规划方法分类</span><span lang="en">Figure 2 · Taxonomy of RL-based single-robot planners</span></figcaption>
+            <div class="paper-gallery-track">
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-review.png" target="_blank" rel="noopener">
+                  <img src="assets/paper-review.png" alt="" width="1332" height="648" loading="lazy">
+                  <span class="sr-only"><span lang="zh-CN">查看原图：图 2 · 单机器人强化学习规划方法分类</span><span lang="en">View original: Figure 2 · Taxonomy of RL-based single-robot planners</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 2 · 单机器人强化学习规划方法分类</span><span lang="en">Figure 2 · Taxonomy of RL-based single-robot planners</span></div>
+              </div>
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-review-fig8.webp" target="_blank" rel="noopener">
+                  <img src="assets/paper-review-fig8.webp" alt="" width="1310" height="860" loading="lazy" decoding="async">
+                  <span class="sr-only"><span lang="zh-CN">查看原图 · 图 8 · 强化学习规划的研究挑战</span><span lang="en">View original · Fig. 8 · Open challenges in RL-based planning</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 8 · 强化学习规划的研究挑战</span><span lang="en">Fig. 8 · Open challenges in RL-based planning</span><a class="figure-source" href="https://arxiv.org/abs/2108.13619" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+            </div>
+            <figcaption class="paper-gallery-controls" hidden>
+              <button type="button" class="paper-prev"><span aria-hidden="true">‹</span><span class="sr-only"><span lang="zh-CN">上一张图</span><span lang="en">Previous figure</span></span></button>
+              <span class="paper-count" aria-hidden="true">1 / 2</span>
+              <button type="button" class="paper-next"><span aria-hidden="true">›</span><span class="sr-only"><span lang="zh-CN">下一张图</span><span lang="en">Next figure</span></span></button>
+            </figcaption>
           </figure>
           <div class="paper-content">
             <p class="paper-venue"><span class="author-position"><span lang="zh-CN">第二作者</span><span lang="en">Second author</span></span>Journal of Systems Engineering and Electronics · <time datetime="2023-04">2023.04</time></p>
@@ -292,11 +362,27 @@
 
         <article data-author-position="1" class="paper-card with-figure" data-publication-date="2022-05">
           <figure class="paper-figure">
-            <a class="paper-image" href="assets/paper-auv.png" target="_blank" rel="noopener">
-              <img src="assets/paper-auv.png" alt="" width="580" height="624" loading="lazy">
-              <span class="sr-only"><span lang="zh-CN">查看架构原图</span><span lang="en">View original architecture figure</span></span>
-            </a>
-            <figcaption><span lang="zh-CN">图 2 · AMPPO 路径规划与轨迹跟踪架构</span><span lang="en">Figure 2 · AMPPO planning and tracking architecture</span><a class="figure-source" href="https://figures.semanticscholar.org/5c8443934a6b629749dd77ef9c442f9f218a5438/4-Figure2-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></figcaption>
+            <div class="paper-gallery-track">
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-auv.png" target="_blank" rel="noopener">
+                  <img src="assets/paper-auv.png" alt="" width="580" height="624" loading="lazy">
+                  <span class="sr-only"><span lang="zh-CN">查看架构原图</span><span lang="en">View original architecture figure</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 2 · AMPPO 路径规划与轨迹跟踪架构</span><span lang="en">Figure 2 · AMPPO planning and tracking architecture</span><a class="figure-source" href="https://figures.semanticscholar.org/5c8443934a6b629749dd77ef9c442f9f218a5438/4-Figure2-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-auv-fig12.webp" target="_blank" rel="noopener">
+                  <img src="assets/paper-auv-fig12.webp" alt="" width="1174" height="352" loading="lazy" decoding="async">
+                  <span class="sr-only"><span lang="zh-CN">查看原图 · 图 12 · 狭窄通道规划对比</span><span lang="en">View original · Fig. 12 · Planning in a narrow passage</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 12 · 狭窄通道规划对比</span><span lang="en">Fig. 12 · Planning in a narrow passage</span><a class="figure-source" href="https://figures.semanticscholar.org/5c8443934a6b629749dd77ef9c442f9f218a5438/9-Figure12-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+            </div>
+            <figcaption class="paper-gallery-controls" hidden>
+              <button type="button" class="paper-prev"><span aria-hidden="true">‹</span><span class="sr-only"><span lang="zh-CN">上一张图</span><span lang="en">Previous figure</span></span></button>
+              <span class="paper-count" aria-hidden="true">1 / 2</span>
+              <button type="button" class="paper-next"><span aria-hidden="true">›</span><span class="sr-only"><span lang="zh-CN">下一张图</span><span lang="en">Next figure</span></span></button>
+            </figcaption>
           </figure>
           <div class="paper-content">
             <p class="paper-venue"><span class="author-position"><span lang="zh-CN">第一作者</span><span lang="en">First author</span></span>IEEE Transactions on Systems, Man, and Cybernetics: Systems · <time datetime="2022-05">2022.05</time> · <span lang="zh-CN">2021 在线发表</span><span lang="en">Online 2021</span></p>
@@ -326,11 +412,27 @@
         <h3 class="publication-group"><span lang="zh-CN">第三作者及以后论文</span><span lang="en">Third- and Later-Author Papers</span></h3>
         <article data-author-position="4" class="paper-card with-figure" data-publication-date="2025-04">
           <figure class="paper-figure">
-            <a class="paper-image" href="assets/paper-dish.png" target="_blank" rel="noopener">
-              <img src="assets/paper-dish.png" alt="" width="1424" height="612" loading="lazy">
-              <span class="sr-only"><span lang="zh-CN">查看架构原图</span><span lang="en">View original architecture figure</span></span>
-            </a>
-            <figcaption><span lang="zh-CN">图 2 · DISH 核心网络架构</span><span lang="en">Figure 2 · DISH network architecture</span><a class="figure-source" href="https://figures.semanticscholar.org/11911a6e8604930af0a35d3ac4bedce12377540a/4-Figure2-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></figcaption>
+            <div class="paper-gallery-track">
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-dish.png" target="_blank" rel="noopener">
+                  <img src="assets/paper-dish.png" alt="" width="1424" height="612" loading="lazy">
+                  <span class="sr-only"><span lang="zh-CN">查看架构原图</span><span lang="en">View original architecture figure</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 2 · DISH 核心网络架构</span><span lang="en">Figure 2 · DISH network architecture</span><a class="figure-source" href="https://figures.semanticscholar.org/11911a6e8604930af0a35d3ac4bedce12377540a/4-Figure2-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-dish-fig8.webp" target="_blank" rel="noopener">
+                  <img src="assets/paper-dish-fig8.webp" alt="" width="1424" height="642" loading="lazy" decoding="async">
+                  <span class="sr-only"><span lang="zh-CN">查看原图 · 图 8 · 指令引导的导航实例</span><span lang="en">View original · Fig. 8 · Instruction-guided navigation example</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 8 · 指令引导的导航实例</span><span lang="en">Fig. 8 · Instruction-guided navigation example</span><a class="figure-source" href="https://figures.semanticscholar.org/11911a6e8604930af0a35d3ac4bedce12377540a/11-Figure8-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+            </div>
+            <figcaption class="paper-gallery-controls" hidden>
+              <button type="button" class="paper-prev"><span aria-hidden="true">‹</span><span class="sr-only"><span lang="zh-CN">上一张图</span><span lang="en">Previous figure</span></span></button>
+              <span class="paper-count" aria-hidden="true">1 / 2</span>
+              <button type="button" class="paper-next"><span aria-hidden="true">›</span><span class="sr-only"><span lang="zh-CN">下一张图</span><span lang="en">Next figure</span></span></button>
+            </figcaption>
           </figure>
           <div class="paper-content">
             <p class="paper-venue"><span class="author-position"><span lang="zh-CN">第四作者</span><span lang="en">Fourth author</span></span>IEEE Transactions on Neural Networks and Learning Systems · <time datetime="2025-04">2025.04</time></p>
@@ -359,11 +461,27 @@
 
         <article data-author-position="3" class="paper-card with-figure" data-publication-date="2024">
           <figure class="paper-figure">
-            <a class="paper-image" href="assets/paper-tifs.png" target="_blank" rel="noopener">
-              <img src="assets/paper-tifs.png" alt="" width="636" height="398" loading="lazy">
-              <span class="sr-only"><span lang="zh-CN">查看架构原图</span><span lang="en">View original architecture figure</span></span>
-            </a>
-            <figcaption><span lang="zh-CN">图 1 · 功能验证与强化学习框架</span><span lang="en">Figure 1 · Functionality-verification RL framework</span><a class="figure-source" href="https://figures.semanticscholar.org/0b7da860dd3ebd8f6ff832c89d3700cc2ac36bb1/3-Figure1-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></figcaption>
+            <div class="paper-gallery-track">
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-tifs.png" target="_blank" rel="noopener">
+                  <img src="assets/paper-tifs.png" alt="" width="636" height="398" loading="lazy">
+                  <span class="sr-only"><span lang="zh-CN">查看架构原图</span><span lang="en">View original architecture figure</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 1 · 功能验证与强化学习框架</span><span lang="en">Figure 1 · Functionality-verification RL framework</span><a class="figure-source" href="https://figures.semanticscholar.org/0b7da860dd3ebd8f6ff832c89d3700cc2ac36bb1/3-Figure1-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-tifs-fig2.webp" target="_blank" rel="noopener">
+                  <img src="assets/paper-tifs-fig2.webp" alt="" width="650" height="398" loading="lazy" decoding="async">
+                  <span class="sr-only"><span lang="zh-CN">查看原图 · 图 2 · 判别特征重要性</span><span lang="en">View original · Fig. 2 · Discrimination feature importance</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 2 · 判别特征重要性</span><span lang="en">Fig. 2 · Discrimination feature importance</span><a class="figure-source" href="https://figures.semanticscholar.org/0b7da860dd3ebd8f6ff832c89d3700cc2ac36bb1/5-Figure2-1.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+            </div>
+            <figcaption class="paper-gallery-controls" hidden>
+              <button type="button" class="paper-prev"><span aria-hidden="true">‹</span><span class="sr-only"><span lang="zh-CN">上一张图</span><span lang="en">Previous figure</span></span></button>
+              <span class="paper-count" aria-hidden="true">1 / 2</span>
+              <button type="button" class="paper-next"><span aria-hidden="true">›</span><span class="sr-only"><span lang="zh-CN">下一张图</span><span lang="en">Next figure</span></span></button>
+            </figcaption>
           </figure>
           <div class="paper-content">
             <p class="paper-venue"><span class="author-position"><span lang="zh-CN">第三作者</span><span lang="en">Third author</span></span>IEEE Transactions on Information Forensics and Security · <time datetime="2024">2024</time></p>
@@ -392,11 +510,27 @@
 
         <article data-author-position="3" class="paper-card with-figure" data-publication-date="2023-03">
           <figure class="paper-figure">
-            <a class="paper-image" href="assets/paper-landing-network.png" target="_blank" rel="noopener">
-              <img src="assets/paper-landing-network.png" alt="" width="850" height="364" loading="lazy">
-              <span class="sr-only"><span lang="zh-CN">查看架构原图</span><span lang="en">View original architecture figure</span></span>
-            </a>
-            <figcaption><span lang="zh-CN">AsDDQN-Cla 核心网络架构</span><span lang="en">AsDDQN-Cla network architecture</span><a class="figure-source" href="https://www.researchgate.net/figure/The-entire-structure-of-the-network-with-classification-auxiliary-task-AsDDQN-Cla-The_fig1_361821490" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></figcaption>
+            <div class="paper-gallery-track">
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-landing-network.png" target="_blank" rel="noopener">
+                  <img src="assets/paper-landing-network.png" alt="" width="850" height="364" loading="lazy">
+                  <span class="sr-only"><span lang="zh-CN">查看架构原图</span><span lang="en">View original architecture figure</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">AsDDQN-Cla 核心网络架构</span><span lang="en">AsDDQN-Cla network architecture</span><a class="figure-source" href="https://www.researchgate.net/figure/The-entire-structure-of-the-network-with-classification-auxiliary-task-AsDDQN-Cla-The_fig1_361821490" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+              <div class="paper-slide">
+                <a class="paper-image" href="assets/paper-landing-fig10.webp" target="_blank" rel="noopener">
+                  <img src="assets/paper-landing-fig10.webp" alt="" width="1200" height="509" loading="lazy" decoding="async">
+                  <span class="sr-only"><span lang="zh-CN">查看原图 · 图 10 · 不同地表纹理下的降落成功率</span><span lang="en">View original · Fig. 10 · Landing success across surface textures</span></span>
+                </a>
+                <div class="paper-slide-caption"><span lang="zh-CN">图 10 · 不同地表纹理下的降落成功率</span><span lang="en">Fig. 10 · Landing success across surface textures</span><a class="figure-source" href="https://media.springernature.com/lw1200/springer-static/image/art%3A10.1007%2Fs10489-022-03503-6/MediaObjects/10489_2022_3503_Fig10_HTML.png" target="_blank" rel="noopener"><span lang="zh-CN">图源</span><span lang="en">Source</span> ↗</a></div>
+              </div>
+            </div>
+            <figcaption class="paper-gallery-controls" hidden>
+              <button type="button" class="paper-prev"><span aria-hidden="true">‹</span><span class="sr-only"><span lang="zh-CN">上一张图</span><span lang="en">Previous figure</span></span></button>
+              <span class="paper-count" aria-hidden="true">1 / 2</span>
+              <button type="button" class="paper-next"><span aria-hidden="true">›</span><span class="sr-only"><span lang="zh-CN">下一张图</span><span lang="en">Next figure</span></span></button>
+            </figcaption>
           </figure>
           <div class="paper-content">
             <p class="paper-venue"><span class="author-position"><span lang="zh-CN">第三作者</span><span lang="en">Third author</span></span>Applied Intelligence · <time datetime="2023-03">2023.03</time></p>
