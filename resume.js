@@ -95,7 +95,7 @@ const themeColor = document.querySelector('meta[name="theme-color"]');
 
 function setTheme(theme, persist = false) {
   root.dataset.theme = theme;
-  themeColor.content = theme === "dark" ? "#101e16" : "#13291f";
+  themeColor.content = theme === "dark" ? "#191a1e" : "#f5f5f7";
   themeButtons.forEach(button => {
     button.setAttribute("aria-pressed", String(button.dataset.theme === theme));
   });
@@ -155,7 +155,7 @@ function spawnParticles(event, burst) {
   if (!burst && now - lastTrailTime < 64) return;
   lastTrailTime = now;
 
-  const palette = root.dataset.theme === "dark" ? ["#eabb70", "#b8e1a7"] : ["#966727", "#4c7b51"];
+  const palette = root.dataset.theme === "dark" ? ["#a9caff", "#c5bddc"] : ["#517fc1", "#8894b0"];
   const count = burst ? 7 : 1;
   for (let i = 0; i < count; i++) {
     const angle = Math.random() * Math.PI * 2;
